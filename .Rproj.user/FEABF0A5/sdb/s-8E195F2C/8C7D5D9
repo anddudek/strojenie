@@ -1,0 +1,16 @@
+{
+    "contents" : "library(shiny)\n\nshinyUI(fluidPage(\n  \n  # Application title\n  titlePanel(\"Projekt G5\"),\n  \n  # Sidebar with a slider input for the number of bins\n  sidebarLayout(\n    sidebarPanel(\n      #textInput(\"adres\", \"Podaj sciezke do dzwieku .wav\", value = \"http://student.agh.edu.pl/~andudek/GUITAR.WAV\"),\n      selectInput(\"plik\", \"Wybierz plik:\",\n                  c(\"Wybierz dzwiek...\" = \"none\", \"GUITAR.WAV\" = \"data/GUITAR.WAV\")),\n      radioButtons(\"typ\", \"Typ wykresu\", c(\"Plik wave\"=\"wave\",                                        \n                                                    \"FFT\"=\"FFT\")),\n      actionButton(\"play\", \"Odtworz\")\n    ),\n    \n    # Show a plot of the generated distribution\n    mainPanel(\n      plotOutput(\"distPlot\"),\n      h4(\"Czestotliwosc o najwyzszej amplitudzie\"),\n      verbatimTextOutput(\"nText\")\n    )\n  )\n))",
+    "created" : 1416735345893.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2913550375",
+    "id" : "8C7D5D9",
+    "lastKnownWriteTime" : 1416759945,
+    "path" : "~/Rstudio/strojenie/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,16 @@
+{
+    "contents" : "library(shiny)\nlibrary(tuneR)\n\nshinyServer(function(input, output) {\n  \n  output$distPlot <- renderPlot({\n      dzwiek <- readWave(input$plik);\n      #which_mod = which(Mod(fft(dzwiek@left)) == max(abs(Mod(fft(dzwiek@left))))) * dzwiek@samp.rate / length(dzwiek@left);\n      if (input$typ == \"wave\"){\n        plot(dzwiek);\n      }\n      else if (input$typ == \"FFT\"){\n        plot(Mod(fft(dzwiek@left)));\n      }\n  })\n  output$nText <- renderText({\n    dzwiek <- readWave(input$plik);\n    input$play;\n    isolate(play(dzwiek));\n    which_mod = which(Mod(fft(dzwiek@left)) == max(abs(Mod(fft(dzwiek@left))))) * dzwiek@samp.rate / length(dzwiek@left);\n\n  })\n})\n",
+    "created" : 1416735339473.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "298935236",
+    "id" : "46CBB27",
+    "lastKnownWriteTime" : 1416761305,
+    "path" : "~/Rstudio/strojenie/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

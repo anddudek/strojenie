@@ -1,0 +1,17 @@
+{
+    "contents" : "library(tuneR)\n\ndzwiek <- readWave(\"GUITAR.wav\");\nplot(dzwiek);\nwhich_mod = which(Mod(fft(dzwiek@left)) == max(abs(Mod(fft(dzwiek@left))))) * dzwiek@samp.rate / length(dzwiek@left);\n#plot dzwiek, plot(Mod(fft(dzwiek@left))), podaj adres- readw(adres), playsound",
+    "created" : 1416733194529.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3472412803",
+    "id" : "F9D0E851",
+    "lastKnownWriteTime" : 1416735290,
+    "path" : "~/Rstudio/strojenie/script.R",
+    "project_path" : "script.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
